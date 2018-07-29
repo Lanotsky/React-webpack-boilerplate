@@ -7,7 +7,6 @@ const App = () => {
   return (
     <div>
     <Component />
-      <p>React here!</p>
     </div>
   );
 };

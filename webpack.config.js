@@ -16,7 +16,7 @@ module.exports={
             {
                 test: /\.scss$/,
                 use: [ 
-                MiniCssExtractPlugin.loader, // process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader
+                process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
                 "css-loader", 
                 "postcss-loader",
                 "sass-loader"]
@@ -42,7 +42,8 @@ module.exports={
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/index.html",
-            filename: "./index.html"
+            filename: "./index.html",
+            inject: "body"
         }),
         new MiniCssExtractPlugin({
             filename: "style.css"
@@ -50,7 +51,7 @@ module.exports={
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 3000,
-            proxy: 'http://localhost:8080/'
+            // proxy: 'http://localhost:8080/' just in case you want to load a proxy
         })
     ]
 
