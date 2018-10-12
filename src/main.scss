@@ -1,7 +1,9 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    color: rgb(20,20,20);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#e98a00, #f5aa2f); 
+    p {
+        color: rgba(10,10,10,0.5);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
 }
-

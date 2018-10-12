@@ -1,14 +1,7 @@
-import './main.scss';
-import Component from './app' 
+import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom";
-
-const App = () => {
-  return (
-    <div>
-    <Component />
-    </div>
-  );
-};
+import "./main.scss";
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
